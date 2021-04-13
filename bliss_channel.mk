@@ -19,8 +19,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common StyxOS stuff
-$(call inherit-product, vendor/styx/config/common.mk)
+# Inherit some common Bliss stuff
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Inherit from channel device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -28,13 +28,15 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := motorola
 PRODUCT_DEVICE := channel
 PRODUCT_MANUFACTURER := motorola
-PRODUCT_NAME := styx_channel
+PRODUCT_NAME := bliss_channel
 PRODUCT_MODEL := moto g(7) play
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
         PRODUCT_NAME=channel
+	PRIVATE_BUILD_DESC="coral-user 11 RQ2A.210405.005 7181113 release-keys"
 
-# StyxOS
-STYX_BUILD_VARIANT := OFFICIAL
-PRODUCT_PRODUCT_PROPERTIES += \
-    org.styxproject.maintainer=Amy Grace
+BUILD_FINGERPRINT := google/coral/coral:11/RQ2A.210405.005/7181113:user/release-keys
+
+# Bliss
+PRODUCT_PRODUCT_PROPERTIES += ro.bliss.maintainer=Amy Grace
+BLISS_BUILDTYPE := OFFICIAL

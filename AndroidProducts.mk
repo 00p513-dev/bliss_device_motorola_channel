@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/styx_channel.mk
+    $(LOCAL_DIR)/bliss_channel.mk
 
 COMMON_LUNCH_CHOICES := \
-    styx_channel-eng \
-    styx_channel-user \
-    styx_channel-userdebug
+    bliss_channel-eng \
+    bliss_channel-user \
+    bliss_channel-userdebug

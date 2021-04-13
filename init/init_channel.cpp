@@ -97,9 +97,9 @@ void vendor_load_device_properties()
         }
     } else {
         /* moto g(7) play (Unlocked) */
-        property_override_device("ro.build.description", "channel-user 9 PPY29.148-140 687ae release-keys");
+        property_override_device("ro.build.description", "coral-user 11 RQ2A.210405.005 7181113 release-keys");
+        property_override_device("ro.build.fingerprint", "google/coral/coral:11/RQ2A.210405.005/7181113:user/release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/channel_retail/channel:9/PPY29.148-140/687ae:user/release-keys");
             set_ro_product_prop(source, "device", "channel");
             set_ro_product_prop(source, "model", "moto g(7) play");
         }
